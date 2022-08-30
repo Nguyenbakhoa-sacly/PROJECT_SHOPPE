@@ -1,0 +1,208 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+    --primary-color:rgb(238,75,43);
+    --border-color:#d8d6d6db;
+    --nc-primary: #ee4d2d;
+    --nc-secondary-blue: #0046ab;
+    --star-gold-color: #ffce3e;
+    --nc-secondary-green: #26aa99;
+    --nc-error: #ee2c4a;
+    --nc-error-bg: #fff4f4;
+    --nc-caution: #f69113;
+    --nc-caution-bg: #fff8e4;
+    --nc-success: #30b566;
+    --nc-success-bg: #f7fffe;
+    --nc-text-primary: rgba(0, 0, 0, 0.87);
+    --nc-text-primary-o: #212121;
+    --nc-text-secondary: rgba(0, 0, 0, 0.65);
+    --nc-text-secondary-o: #595959;
+    --nc-text-tertiary: rgba(0, 0, 0, 0.54);
+    --nc-text-tertiary-o: #757575;
+    --nc-text-link: #0088ff;
+    --nc-util-mask: rgba(0, 0, 0, 0.4);
+    --nc-util-disabled: rgba(0, 0, 0, 0.26);
+    --nc-util-disabled-o: #bdbdbd;
+    --nc-util-line: rgba(0, 0, 0, 0.09);
+    --nc-util-line-o: #e8e8e8;
+    --nc-util-bg: #f5f5f5;
+    --nc-util-placeholder: #fafafa;
+
+    --header-height:120px;
+    --navbar-height:34px;
+    --header-width-search-height:calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height:46px;
+}
+*{
+    box-sizing: inherit;
+
+}
+html{
+    font-size:62.5%;
+    line-height :1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+
+}
+/*Responsive*/
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px ;
+    margin-right: -5px;
+}
+/* test */
+.grid__column-2{  
+    padding-left: 5px;
+    padding-right: 5px;  
+    width:16.6667%;
+
+}
+.grid__column-10{  
+    padding-left: 5px;
+    padding-right: 5px;  
+    width:83.3333%;
+
+}
+.grid__column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;  
+    width:20%;
+}
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
+@keyframes headernotifyGrowth {
+    from{
+        opacity: 0;
+        transform:scale(0)
+    }
+    to{
+        opacity: 1;
+        transform:scale(1)
+    }
+}
+/* button style*/
+.btn{
+    min-width: 124px;
+    min-height:34px;
+    text-decoration: none;
+    border-radius: 2px;
+    border: none ;
+    font-size:1.3rem;
+    padding:0 8px;
+    outline: none;
+    cursor: pointer;
+    color:var(--text-color);
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+}
+.btn.btn__normal:hover{
+    background-color:rgba(0,0,0,0.1);
+}
+.btn.btn-primary{
+    color:var(--white-color);
+    background-color: var(--primary-color);
+}
+.btn.btn__size-s{
+    height: 32px;
+    font-size: 1.2rem;
+}
+/* selection */
+.select-input{
+    padding: 0 12px;
+    border-radius:2px;
+    height:34px;
+    background-color:var(--white-color);
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+.select-input__label{
+    font-size: 1.4rem;
+
+}
+.select-input__icon{
+    font-size: 1.4rem;
+    color: rgb(131,131,131);
+    position: relative;
+    top: 1px;
+}
+.select-input__list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    padding: 8px 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    list-style: none;
+    display:none;
+    z-index: 1;
+}
+.select-input:hover .select-input__list{
+    display:block;
+}
+.select-input__link{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+.select-input__link:hover{
+    color: var(--primary-color);
+}
+/* pagination */
+.pagination{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    
+}
+.pagination-item{
+    margin: 0 8px;
+}
+.pagination-item__active .pagination-item__link{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.pagination-item__active .pagination-item__link:hover{
+    background-color:#f05d40;
+}
+.pagination-item__link{
+    --height:30px;
+    display:block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight:400;
+    color:#939393;
+    min-width: 40px;
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+}
